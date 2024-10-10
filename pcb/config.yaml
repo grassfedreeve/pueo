@@ -1,0 +1,332 @@
+meta:
+  engine: 4.0.0
+  name: pueo
+  version: 0.1
+  author: grassfedreeve
+  url: https://github.com/grassfedreeve/pueo
+
+presets: 
+  # These presets provide different layout options
+  # Select a preset in the `units` section below
+  # Note: The appropriate switch footprint will still need to be set in the `pcb` section
+  choc_spaced:
+    capx: 17        # Key cap size horizontal
+    capy: 16        # Key cap size vertical
+    kx: 18.5        # Key spacing horizontal
+    ky: 17.5        # Key spacing vertical
+    pinky_splay: 5  # Degrees of splay between pinky and ring columns
+    pinky_adj: -9   # Adjustment to compensate for splay spacing
+    ring_splay: 3
+    ring_adj: -8
+    middle_splay: 0
+    middle_adj: 0
+    thumb_offsetx: 0.25kx
+  
+  choc_min_spaced:
+    capx: 14.5
+    capy: 14.5
+    kx: 15.5
+    ky: 15.5
+    pinky_splay: 5
+    pinky_adj: -3
+    ring_splay: 3
+    ring_adj: -8
+    middle_splay: 3
+    middle_adj: -5
+    thumb_offsetx: 1/3kx
+
+  mx_spaced:
+    capx: 18
+    capy: 18
+    kx: 19
+    ky: 19
+    pinky_splay: 5
+    pinky_adj: -4
+    ring_splay: 3
+    ring_adj: -10
+    middle_splay: 0
+    middle_adj: 0
+    thumb_offsetx: 0.25kx
+  
+  mx_min_spaced:
+    capx: 15.5
+    capy: 15.5
+    kx: 16 + 0.5
+    ky: 16 + 0.5
+    pinky_splay: 5
+    pinky_adj: -3
+    ring_splay: 3
+    ring_adj: -8
+    middle_splay: 3
+    middle_adj: -5
+    thumb_offsetx: 1/3kx
+
+units:
+  $extends: presets.choc_spaced
+
+  # Defaults/Constants
+  # ====================
+  $default_height: 0  # Points invisible by default unless height/width explicitly set
+  $default_width: 0
+  xiao_x: 17.8
+  xiao_y: 21
+  promicro_x: 18.3
+  promicro_y: 34.1
+  sf: 17
+
+
+points:
+  zones.matrix:
+    anchor.shift: [100, -100]  # Fix placement on KiCAD sheet
+    rotate: ring_splay + pinky_splay
+    key:
+      width: capx
+      height: capy
+      spread: kx      
+      padding: ky
+      autobind: 0
+    rows:
+      bottom:
+      home:
+      top:
+    columns.pinky:
+      rows:
+        bottom.skip: true
+        top.skip: true
+        home:
+          bind: [0ky, 0.5kx, 0, 0]
+          row_net: P2
+          column_net: P6
+    columns.ring:
+      key:
+        stagger: 0.96ky
+        splay: -pinky_splay
+        origin: [0, pinky_adj]
+      rows:
+        bottom:
+          bind: [0.5ky, 0, 0, 0]
+          row_net: P4
+          column_net: P6
+        home:
+          bind: [0, 0.5kx, 0, 0]
+          row_net: P3
+          column_net: P6
+        top:
+          bind: [0, 0.5kx, 0.5ky, 0]
+          row_net: P1
+          column_net: P6
+    columns.middle:
+      key:
+        stagger: 0.25ky
+        splay: -ring_splay
+        origin: [0, ring_adj]
+      rows:
+        bottom:
+          bind: [0.5ky, 0.5kx, 0, 0.5kx]
+          row_net: P5
+          column_net: P6
+        home:
+          bind: [0, 0.5kx, 0, 0]
+          row_net: P2
+          column_net: P7
+        top:
+          bind: [0, 0, 0.5ky, 0]
+          row_net: P0
+          column_net: P7
+    columns.index:
+      key.stagger: -0.25ky
+      rows:
+        bottom:
+          bind: [0.5ky, 0, 0, 0]
+          row_net: P4
+          column_net: P7
+        home:
+          row_net: P3
+          column_net: P7
+        top:
+          bind: [0, 0, 0.5ky, 0.5kx]
+          row_net: P1
+          column_net: P7
+    columns.inner:
+      key.stagger: -0.5ky
+      rows:
+        bottom.skip: true
+        home:
+          bind: [0.5ky, 0, 0.5ky, 0.5kx]
+          row_net: P2
+          column_net: P8
+        top:
+          bind: [0, 0, 0.5ky, 0.5kx]
+          row_net: P0
+          column_net: P8
+  zones.thumb:
+    anchor:
+      ref: matrix_index_bottom
+      shift: [1.9kx, -0.75ky]
+    key.$extends: points.zones.matrix.key
+    columns:
+      reachy:
+        key:
+          stagger: -0.33ky
+          rotate: -20
+          width: 1.5ky        
+          bind: [1.5ky, 0, 0, 0]
+          row_net: P4
+          column_net: P8
+  zones.reference_top_center:
+    anchor:
+      aggregate.parts: [matrix_inner_top]
+      shift: [0, -0.65ky]
+  zones.reference_index_bottom:
+    anchor:
+      aggregate.parts: [matrix_index_bottom]
+  zones.mcu:
+    anchor:
+      ref: reference_top_center
+      shift: [1kx, 10]
+      rotate: -90
+    key:
+      width: promicro_y
+      height: promicro_x
+  zones.mounting_hole_top_left:
+    anchor:
+      - ref: matrix_ring_top
+        affect: y
+        shift: [0, -0.2ky + 4.5]
+      - ref: matrix_ring_top
+        affect: x
+        shift: [0.7kx - 2.5, 0]
+    key:
+      height: 2
+      width: 2
+  zones.mounting_hole_bottom_left:
+    anchor:
+      - ref: matrix_ring_bottom
+        affect: y
+        shift: [0, -0.7ky]
+      - ref: matrix_ring_bottom
+        affect: x
+        shift: [-0.25kx - 2.5, 0]
+    key:
+      height: 2
+      width: 2
+  zones.mounting_hole_bottom_right:
+    anchor:
+      - ref: matrix_inner_home
+        affect: y
+        shift: [0, -1ky]
+      - ref: matrix_inner_home
+        affect: x
+        shift: [1kx + 6, 0]
+  zones.mounting_hole_top_right:
+    anchor:
+      - ref: matrix_inner_home
+        affect: y
+        shift: [0, 2ky - 4]
+      - ref: matrix_inner_home
+        affect: x
+        shift: [0.35kx, 0]
+
+outlines:
+    _key_outline:
+      - what: rectangle
+        bound: true
+        size: sf
+        where:
+          - /matrix_.*/
+    _thumbkey_outline:
+      - what: rectangle
+        bound: false
+        size: [1.566sf, sf]
+        where:
+          - /thumb_.*/
+    _center:
+      - what: rectangle
+        where:
+          ref: reference_top_center
+          shift: [-1.125ky, -0.1ky]
+        size: [5.2kx, 3.5ky]
+    _panel:
+      - name: _center
+        fillet: .5  # The inner rounding where the glue meets the top center keys
+      - operation: add
+        what: rectangle
+        where:
+          aggregate.parts: [thumb_reachy]
+      - _key_outline
+      - _thumbkey_outline
+    panel:
+      - name: _panel
+        fillet: .5
+    _switches:
+      - what: rectangle
+        size: 14
+        where:
+          - /matrix_.*/
+    _thumbswitches:
+      - what: rectangle
+        size: 14
+        where:
+          - /thumb_.*/
+    _keycaps:
+      - what: rectangle
+        size: [capx, capy]
+        where:
+          - /matrix_.*/
+    _thumbkeycaps:
+     - what: rectangle
+       size: [1.5capx, capy]
+       where:
+          - /thumb_.*/
+    _mcu:
+      - what: rectangle
+        where: mcu
+        size: [promicro_y, promicro_x]
+    _mounting_holes:
+      - what: circle
+        where: /mounting_hole_.*/
+        radius: 1
+    demo_switches:
+      - panel
+      - ^_switches
+      - ^_thumbswitches
+      - ^_mcu
+      - ^_mounting_holes
+    demo_keycaps:
+      - panel
+      - ^_keycaps
+      - ^_thumbkeycaps
+      - ^_mcu
+      - ^_mounting_holes
+    switchplate:
+      - panel
+      - operation: subtract
+        name: _switches
+        fillet: 0.5
+      - operation: subtract
+        name: _thumbswitches
+        fillet: 0.5
+      - operation: subtract
+        name: _mcu
+        fillet: 0.5
+      - operation: subtract
+        name: _mounting_holes
+
+pcbs:
+  pueo:
+    outlines:
+      main:
+        outline: panel
+    footprints:
+      - what: choc
+        where:
+          - /matrix_.*/
+          - /thumb_.*/
+        params:
+          from: "{{row_net}}"
+          to: "{{column_net}}"
+      - what: promicro
+        where: mcu
+      - what: via
+        where: /mounting_hole_.*/
+        params.net: ""
