@@ -32,7 +32,7 @@ The pueo was built intending to be used with the great [SpitKB Tenting Puck](htt
 
 ![pueo-tenting](https://github.com/grassfedreeve/pueo/blob/main/img/pueo_tenting.jpg?raw=true)
 
-##Firmware
+## Firmware
 ZMK is what I use and have setup a module for: [peuo ZMK Module](https://github.com/grassfedreeve/zmk-keyboards-pueo) 
 
 ## Inspiration & Thanks
