@@ -1,0 +1,270 @@
+
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "1451" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (property "Reference" "D" (id 0) (at -5.08 11.43 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Value" "1451" (id 1) (at -5.08 -15.24 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Footprint" "1451:LED_1451" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MF" "Adafruit Industries" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MAXIMUM_PACKAGE_HEIGHT" "5.02mm" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Package" "DIP-4 Adafruit Industries" (id 6) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Price" "None" (id 7) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Check_prices" "https://www.snapeda.com/parts/1451/Adafruit+Industries+LLC/view-part/?ref=eda" (id 8) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "STANDARD" "Manufacturer Recommendations" (id 9) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PARTREV" "N/A" (id 10) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "SnapEDA_Link" "https://www.snapeda.com/parts/1451/Adafruit+Industries+LLC/view-part/?ref=snap" (id 11) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MP" "1451" (id 12) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=769402&manufacturer=Adafruit Industries&part_name=1451&search_term=None" (id 13) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Description" "\nRed, Green, Blue (RGB) - LED Indication - Discrete 1.8V Red, 3V Green, 3V Blue 4-DIP (0.200, 5.08mm)\n" (id 14) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Availability" "In Stock" (id 15) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MANUFACTURER" "Adafruit Industries" (id 16) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (symbol "1451_0_0"
+      (polyline
+        (pts (xy -6.096 0.0) (xy -7.62 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -7.62 0.0) (xy -9.144 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -9.144 0.0) (xy -7.62 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -7.62 -2.54) (xy -6.096 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -6.096 -2.54) (xy -9.144 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -3.556 -3.556) (xy -5.588 -1.778)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -4.5212 -3.2258) (xy -4.0386 -2.667)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -4.0386 -2.667) (xy -3.556 -3.556)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -3.556 -3.556) (xy -4.5212 -3.2258)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -4.5212 -3.2258) (xy -3.7846 -3.2512)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -3.7846 -3.2512) (xy -3.7846 -3.1242)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -4.1148 -2.8448) (xy -3.9624 -3.0734)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -3.4544 -2.3114) (xy -5.4864 -0.5334)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -4.4196 -1.9812) (xy -3.937 -1.4224)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -3.937 -1.4224) (xy -3.4544 -2.3114)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -3.4544 -2.3114) (xy -4.4196 -1.9812)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -4.4196 -1.9812) (xy -3.683 -2.0066)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -3.683 -2.0066) (xy -3.683 -1.8796)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -4.0132 -1.6002) (xy -3.8608 -1.8288)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 1.524 0.0) (xy 0.0 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 0.0 0.0) (xy -1.524 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -1.524 0.0) (xy 0.0 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 0.0 -2.54) (xy 1.524 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 1.524 -2.54) (xy -1.524 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 0.0 0.0) (xy 0.0 2.54)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 4.064 -3.556) (xy 2.032 -1.778)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.0988 -3.2258) (xy 3.5814 -2.667)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.5814 -2.667) (xy 4.064 -3.556)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 4.064 -3.556) (xy 3.0988 -3.2258)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.0988 -3.2258) (xy 3.8354 -3.2512)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.8354 -3.2512) (xy 3.8354 -3.1242)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.5052 -2.8448) (xy 3.6576 -3.0734)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 4.1656 -2.3114) (xy 2.1336 -0.5334)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.2004 -1.9812) (xy 3.683 -1.4224)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.683 -1.4224) (xy 4.1656 -2.3114)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 4.1656 -2.3114) (xy 3.2004 -1.9812)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.2004 -1.9812) (xy 3.937 -2.0066)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.937 -2.0066) (xy 3.937 -1.8796)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 3.6068 -1.6002) (xy 3.7592 -1.8288)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 9.144 0.0) (xy 7.62 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 7.62 0.0) (xy 6.096 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 6.096 0.0) (xy 7.62 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 7.62 -2.54) (xy 9.144 0.0)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 9.144 -2.54) (xy 6.096 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.684 -3.556) (xy 9.652 -1.778)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 10.7188 -3.2258) (xy 11.2014 -2.667)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.2014 -2.667) (xy 11.684 -3.556)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.684 -3.556) (xy 10.7188 -3.2258)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 10.7188 -3.2258) (xy 11.4554 -3.2512)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.4554 -3.2512) (xy 11.4554 -3.1242)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.1252 -2.8448) (xy 11.2776 -3.0734)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.7856 -2.3114) (xy 9.7536 -0.5334)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 10.8204 -1.9812) (xy 11.303 -1.4224)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.303 -1.4224) (xy 11.7856 -2.3114)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.7856 -2.3114) (xy 10.8204 -1.9812)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 10.8204 -1.9812) (xy 11.557 -2.0066)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.557 -2.0066) (xy 11.557 -1.8796)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 11.2268 -1.6002) (xy 11.3792 -1.8288)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy -7.62 0.0) (xy -7.62 5.08)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy -7.62 5.08) (xy 7.62 5.08)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 7.62 5.08) (xy 7.62 0.0)) (stroke (width 0.1524))
+      )
+      (pin passive line (at -7.62 -7.62 90.0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "4"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 0.0 -7.62 90.0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "3"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 7.62 -7.62 90.0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 0.0 7.62 270.0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+    )
+  )
+)
