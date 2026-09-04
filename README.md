@@ -23,17 +23,17 @@ Alternative base layouts, Colemak DH, [Bird](https://github.com/jcmkk3/bird-layo
 - 2 nice!nanos v2
 - 26 kailh choc low profile switches
 - 26 keycaps
-- 2 [100mAh 401230 batteries](https://www.ebay.com.au/itm/175225874566)
-- 2 [power switchs](https://www.aliexpress.com/item/1005006213873906.html?)
+- 2 100mAh 401230 batteries
+- 2 6-pin vertical power switchs such as [these](https://www.amazon.com/dp/B01E3G12YY?)
 - 2 [reset buttons TS-1236-4.3](https://www.aliexpress.com/item/1005001629184984.html)]
 
 # Tenting
-The pueo was built intending to be used with the great [SpitKB Tenting Puck](https://splitkb.com/products/tenting-puck) and mounted on smallrig magic arms. As of publishing the board they were out of stock so I am using magnetic rings for now. 
+The pueo was built intending to be used with the great [SpitKB Tenting Puck](https://splitkb.com/products/tenting-puck) and mounted on smallrig magic arms. As of publishing the board they were out of stock so I am using magnetic rings for now.
 
 ![pueo-tenting](https://github.com/grassfedreeve/pueo/blob/main/img/pueo_tenting.jpg?raw=true)
 
 ## Firmware
-ZMK is what I use and have setup a module for: [peuo ZMK Module](https://github.com/grassfedreeve/zmk-keyboards-pueo) 
+ZMK is what I use and have setup a module for: [peuo ZMK Module](https://github.com/grassfedreeve/zmk-keyboards-pueo)
 
 ## Inspiration & Thanks
 - GEIST's [TOTEM](https://github.com/GEIGEIGEIST/TOTEM) keyboard
